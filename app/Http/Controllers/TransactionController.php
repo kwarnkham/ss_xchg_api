@@ -26,4 +26,10 @@ class TransactionController extends Controller
         
         return response()->json($transaction, 201);
     }
+
+    public function index()
+    {
+        $transactions = Transaction::orderBy('id','desc')->paginate(10);
+        return response()->json($transactions, 200);
+    }
 }
