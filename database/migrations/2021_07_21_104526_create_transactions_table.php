@@ -15,11 +15,11 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->float('amount');
+            $table->string('amount');
             $table->smallInteger('type');
-            $table->float('rate');
-            $table->float('fees');
-            $table->float('net')->nullable();
+            $table->string('rate');
+            $table->string('fees');
+            $table->string('net')->nullable();
             $table->timestamps();
         });
     }
