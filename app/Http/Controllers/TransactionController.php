@@ -14,6 +14,7 @@ class TransactionController extends Controller
             'amount' => 'required|numeric',
             'type' => 'required|numeric',
             'rate' => 'required|numeric',
+            'name' => 'required'
         ]);
 
         if ($validated['type'] == 1) {
